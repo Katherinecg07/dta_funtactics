@@ -6,7 +6,14 @@ from io import BytesIO  # Para guardar el gráfico en memoria como un archivo PN
 # Create your views here.
 
 def index(request):
-    return HttpResponse("Graphify index")
+    # return HttpResponse("Graphify index")
+    prediccion = "Incremento de 5% en ventas"
+    return render(request, "graphify/index.html", {
+        "axis_x": "Producto",
+        "axis_y": "Cantidad",
+        "logo": "https://img.freepik.com/premium-vector/analytic-graph-logo-vector-icon-illustration_12860-119.jpg ",
+        "prediccion": prediccion
+    })
 
 def v_reporte_png(request):
     # Datos para el gráfico (puedes adaptarlos según tus necesidades)
