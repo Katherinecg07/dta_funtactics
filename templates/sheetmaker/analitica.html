@@ -1,15 +1,27 @@
 {%extends 'layout_sheetmaker.html' %}
 
 {% block header %}
-<h4>Contenido header 🎅</h4>
+
 {% endblock %}
 
 {% block content %}
-<h3>Contenido content 😀</h3>
-<img src="https://concepto.de/wp-content/uploads/2018/02/diagrama-de-flujo2-e1545266408727-800x400.jpg" alt="grafico">
+<!-- CONTENIDO B -->
+<div class="card h-100 text-center p-3">
+    <div class="card-body">
+        <h5 class="card-title">Reportes Generales</h5>
+        <p class="card-text">Obten reportes detallados para análisis en profundidad.</p>
+        <button class="btn btn-primary">Ver más</button>
+    </div>
+</div>
 {% endblock %}
 
 
 {% block footer %}
-<h3>Contenido footer 😻</h3>
+<!-- CONTENIDO D -->
+<div class="container mt-5">
+    <div class="alert alert-primary text-center py-4" style="background-color: #007bff; color: white;">
+        <h4 class="fw-bold mb-0">¡Oferta con un 40% de descuento por Cyber Wow!</h4>
+        <p class="mt-2">Aprovecha las ofertas exclusivas en nuestros servicios durante el evento de Cyber Wow.</p>
+    </div>
+</div>
 {% endblock %}

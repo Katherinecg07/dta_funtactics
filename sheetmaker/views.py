@@ -4,7 +4,16 @@ from openpyxl import Workbook
 import datetime
 # Create your views here.
 def index(request):
-    return HttpResponse("SheetMaker index")
+    return HttpResponse("sheetmaker index")
+
+def v_macros(request): # carpeta en donde se encuentra el html
+    return render(request, "sheetmaker/macros.html")
+
+def v_powerbi(request):
+    return render(request, "sheetmaker/powerbi.html")
+
+def v_analitica(request):
+    return render(request, "sheetmaker/analitica.html")
 
 def v_reporte_xls(request):
     # Crear un libro de Excel
