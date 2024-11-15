@@ -7,5 +7,5 @@ urlpatterns = [ # como excribir url en navegador---> sheetmaker/macros
     path("macros", views.v_macros, name="macros"),
     path("powerbi", views.v_powerbi, name="powerbi"),
     path("analitica", views.v_analitica, name="analitica"),
-    
+    # buscar_navegador /funcion/ nombre para ubicar url
 ]

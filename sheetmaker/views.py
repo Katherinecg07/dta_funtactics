@@ -3,17 +3,36 @@ from django.http import HttpResponse
 from openpyxl import Workbook
 import datetime
 # Create your views here.
+
+# Declarar una variable
+static_values =  {
+    "direccion": "Las flores amarillas 343434 | Concepción",
+    "telefono": "+56 912345678",
+    "email": " me@gmail.com",
+    "whatsapp": "+56 985717759",
+    "instagram": ""
+}
+
 def index(request):
     return HttpResponse("sheetmaker index")
 
 def v_macros(request): # carpeta en donde se encuentra el html
-    return render(request, "sheetmaker/macros.html")
+    context =  {
+        "static_values": static_values
+    }
+    return render(request, "sheetmaker/macros.html", context)
 
 def v_powerbi(request):
-    return render(request, "sheetmaker/powerbi.html")
+    context =  {
+        "static_values": static_values
+    }
+    return render(request, "sheetmaker/powerbi.html", context)
 
 def v_analitica(request):
-    return render(request, "sheetmaker/analitica.html")
+    context =  {
+        "static_values": static_values
+    }
+    return render(request, "sheetmaker/analitica.html", context)
 
 def v_reporte_xls(request):
     # Crear un libro de Excel

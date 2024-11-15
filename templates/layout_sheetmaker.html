@@ -81,7 +81,20 @@
     <footer class="text-center py-4">
         <div class="container">
             <p>&copy; 2024 Nuestra Empresa. Todos los derechos reservados.</p>
-            <p>Dirección: Av. Principal 123, Santiago, Chile. Tel: +xx xx xxx</p>
+            <p>Dirección: {{ static_values.direccion }}, Chile. Tel: {{ static_values.telefono}}</p>
+            <p>Contáctanos al correo: {{ static_values.email }}</p>
+            <p>Escribenos al Whatsapp:
+                <img src="https://cdn3.iconfinder.com/data/icons/2018-social-media-logotypes/1000/2018_social_media_popular_app_logo-whatsapp-512.png"
+                    alt="imagen" width="16">
+                <a href="https://wa.me/{{ static_values.whatsapp }}"> {{ static_values.whatsapp }}</a>
+            </p>
+            <p>Instagram:
+                <a href="https://www.instagram.com/{{ static_values.instagram }}" target="_blank">
+                    <img width="32"
+                        src="https://cdn1.iconfinder.com/data/icons/2019-social-media/512/social_media-04-256.png"
+                        alt="Instagram">
+                </a>
+            </p>
             <p>Ofrecemos servicios de consultoría en análisis de datos, desarrollo de aplicaciones y más.</p>
         </div>
     </footer>
