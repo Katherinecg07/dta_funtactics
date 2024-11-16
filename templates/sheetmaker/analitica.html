@@ -1,39 +1,43 @@
-{%extends 'layout_sheetmaker.html' %}
-
-{% block header %}
-
-{% endblock %}
-
+{%extends 'layout_sheetmaker.html' %} {% block header %} {% endblock %}
 {% block content %}
 <!-- CONTENIDO B -->
 <div class="card h-100 text-center p-3">
     <div class="card-body">
         <h5 class="card-title">Reportes Generales</h5>
-        <p class="card-text">Obten reportes detallados para análisis en profundidad.</p>
+        <p class="card-text">
+            Obten reportes detallados para análisis en profundidad.
+        </p>
         <button class="btn btn-primary">Ver más</button>
         <div>
             {% for promo in promos %}
             <div class="{{ promo.color }}">
-                {{ promo.title|upper }} <!-- aplicación de filtro, letras en mayus-->
+                {{ promo.title|upper }}<!-- aplicación de filtro, letras en mayus-->
                 <ul>
                     {% for rule in promo.rules %}
-                    <li>{{ rule|truncatechars:3 }}</li> <!--filtro, cortar letra en n-1-->
+                    <li>{{ rule|truncatechars:3 }}</li><!--filtro, cortar letra en n-1-->
                     {% endfor %}
                 </ul>
             </div>
+            <style>
+                ul {
+                    list-style: none;
+                }
+            </style>
             {% endfor %}
         </div>
     </div>
 </div>
 {% endblock %}
 
-
 {% block footer %}
 <!-- CONTENIDO D -->
 <div class="container mt-5">
-    <div class="alert alert-primary text-center py-4" style="background-color: #007bff; color: white;">
+    <div class="alert alert-primary text-center py-4" style="background-color: #007bff; color: white">
         <h4 class="fw-bold mb-0">¡Oferta con un 40% de descuento por Cyber Wow!</h4>
-        <p class="mt-2">Aprovecha las ofertas exclusivas en nuestros servicios durante el evento de Cyber Wow.</p>
+        <p class="mt-2">
+            Aprovecha las ofertas exclusivas en nuestros servicios durante el evento
+            de Cyber Wow.
+        </p>
     </div>
 </div>
 {% endblock %}

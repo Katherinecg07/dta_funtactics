@@ -42,9 +42,11 @@ def v_analitica(request):
     context =  {
         "static_values": static_values,
         "promos": [ # diccionario dentro de un array
-            {"title": "10% Off", "color": "bg-primary", 
-             "rules": ["Regla1", "Regla2"] # array dentro de un diccionario
-             },
+            {
+                "title": "10% Off", 
+                "color": "bg-primary", 
+                "rules": ["Regla1", "Regla2"] # array dentro de un diccionario
+            },
             {"title": "30% Off", "color": "bg-success",
              "rules": ["Regla1", "Regla2"]
              },
