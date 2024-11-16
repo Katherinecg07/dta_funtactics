@@ -11,6 +11,18 @@
         <h5 class="card-title">Reportes Generales</h5>
         <p class="card-text">Obten reportes detallados para análisis en profundidad.</p>
         <button class="btn btn-primary">Ver más</button>
+        <div>
+            {% for promo in promos %}
+            <div class="{{ promo.color }}">
+                {{ promo.title|upper }} <!-- aplicación de filtro, letras en mayus-->
+                <ul>
+                    {% for rule in promo.rules %}
+                    <li>{{ rule|truncatechars:3 }}</li> <!--filtro, cortar letra en n-1-->
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endfor %}
+        </div>
     </div>
 </div>
 {% endblock %}

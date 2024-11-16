@@ -18,19 +18,40 @@ def index(request):
 
 def v_macros(request): # carpeta en donde se encuentra el html
     context =  {
-        "static_values": static_values
+        "static_values": static_values,
+        "features": ["Soporta xls, xlsx, formatos libres.",
+            "Permite importar, modificar y exportar.",
+            "Cantidad de ejecuciones ilimitadas.",
+            "Envia tus reportes por email.",
+            "Edita documentos en línea."]
     }
     return render(request, "sheetmaker/macros.html", context)
 
 def v_powerbi(request):
     context =  {
-        "static_values": static_values
+        "static_values": static_values,
+        "features": ["Caract1",
+            "Permite elaborar dashboards muy interesantes",
+            "Caract2 ",
+            "Caract3",
+            "Caract4."]
     }
     return render(request, "sheetmaker/powerbi.html", context)
 
 def v_analitica(request):
     context =  {
-        "static_values": static_values
+        "static_values": static_values,
+        "promos": [ # diccionario dentro de un array
+            {"title": "10% Off", "color": "bg-primary", 
+             "rules": ["Regla1", "Regla2"] # array dentro de un diccionario
+             },
+            {"title": "30% Off", "color": "bg-success",
+             "rules": ["Regla1", "Regla2"]
+             },
+            {"title": "50% Off", "color": "bg-danger",
+             "rules": ["Regla1", "Regla2"]
+             }
+        ]
     }
     return render(request, "sheetmaker/analitica.html", context)
 

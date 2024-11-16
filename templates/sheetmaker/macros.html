@@ -11,6 +11,17 @@
         <h5 class="card-title">Macros al dia</h5>
         <p class="card-text">Exporta datos en Macros para mantener la calidad y profesionalismo.</p>
         <button class="btn btn-primary">Ver más</button>
+
+        <ul>
+            {% for feat in features %}
+            <li>{{ feat }}</li>
+            <style>
+                ul {
+                    list-style: none;
+                }
+            </style>
+            {% endfor %}
+        </ul>
     </div>
 </div>
 {% endblock %}
